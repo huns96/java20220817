@@ -1,6 +1,6 @@
 package ch06.lecture.p03method;
 
-public class Myclass1 {
+public class MyClass1 {
 	// field
 	String name;
 	int age;

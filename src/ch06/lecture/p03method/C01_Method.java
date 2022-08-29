@@ -2,7 +2,7 @@ package ch06.lecture.p03method;
 
 public class C01_Method {
 	public static void main(String[] args) {
-		Myclass1 o1 = new Myclass1();
+		MyClass1 o1 = new MyClass1();
 		o1.name = "maverick";
 		o1.age = 99; // (인스턴스) 필드
 		

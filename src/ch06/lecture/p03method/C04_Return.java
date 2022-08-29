@@ -12,6 +12,7 @@ public class C04_Return {
 		
 		int b = o1.method2();
 		long c = o1.method2();
-		float d = o1.method2()
+		float d = o1.method2();
+		double e = o1.method2();
 	}
 }

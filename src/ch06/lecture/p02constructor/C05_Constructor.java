@@ -8,7 +8,9 @@ public class C05_Constructor {
 		Scanner scanner = new Scanner("hello");
 		
 		String s2 = new String();
-		String s3 = new String(new byte[]);
+		String s3 = new String(new byte[] {});
+		String s4 = new String(new char[] {});
+		String s5 = new String(new char[] {}, 1, 2);
 		
 	}
 }
