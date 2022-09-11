@@ -1,4 +1,4 @@
-package ch10.lecture.book;
+package ch10.book;
 
 public class P424_ArrayIndexOutOfBoundsExceptionExample {
 	public static void main(String[] args) {

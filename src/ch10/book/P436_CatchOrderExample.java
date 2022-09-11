@@ -1,4 +1,4 @@
-package ch10.lecture.book;
+package ch10.book;
 
 public class P436_CatchOrderExample {
 	public static void main(String[] args) {
