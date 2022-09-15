@@ -20,6 +20,7 @@ public class Solution119 {
         	
         	row = next;
         }
+        
         return row;
     }
 }
