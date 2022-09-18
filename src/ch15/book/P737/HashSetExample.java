@@ -18,12 +18,21 @@ public class HashSetExample {
 		int size = set.size();
 		System.out.println("총 객체수: " + size);
 		
+		System.out.println("Iterator 사용");
+		
 		Iterator<String> iterator = set.iterator();
-		while(iterator.hasNext()); {
+		while(iterator.hasNext()) {
 			String element = iterator.next();
 			System.out.println("\t" + element);
 		}
-	
+		
+		System.out.println("향상된 for문");
+		for(String pfor : set) {
+			System.out.println("\t" + pfor);
+		}
+		System.out.println("for Each");
+		set.forEach((e) -> System.out.println("\t" + e));
+		
 		
 		set.remove("JDBC");
 		set.remove("iBATIS");

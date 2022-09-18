@@ -10,18 +10,31 @@ public class Student {
 		this.name = name;
 	}
 
+	
+	// hashCode, equals 재정의
+	
 	@Override
 	public int hashCode() {
-		ㅁㄴㅇㅁㄴㅇ
-		return super.hashCode();
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + studentNum;
+		return result;
 	}
 
 	@Override
 	public boolean equals(Object obj) {
-		// TODO Auto-generated method stub
-		return super.equals(obj);
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Student other = (Student) obj;
+		if (studentNum != other.studentNum)
+			return false;
+		return true;
 	}
 	
-	// hashCode, equals 재정의
+	
 	
 }

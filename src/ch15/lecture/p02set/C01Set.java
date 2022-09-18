@@ -24,5 +24,11 @@ public class C01Set {
 		// 이미 있는 지 확인
 		System.out.println(set.contains("captain"));
 		System.out.println(set.contains("batman"));
+		
+		// 지우기
+		System.out.println(set.remove("captain"));
+		System.out.println(set.remove("superman"));
+				
+		System.out.println(set.size());
 	}
 }
