@@ -40,8 +40,5 @@ public class C01Map {
 		System.out.println(val1);
 		System.out.println(map.get("rm"));
 		System.out.println(map.get("batman"));
-
-		// forEach 메소드 사용
-		map.forEach((k, v) -> System.out.println(k + ":" + v));
 	}
 }

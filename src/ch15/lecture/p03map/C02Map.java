@@ -7,6 +7,7 @@ import java.util.Set;
 public class C02Map {
 	public static void main(String[] args) {
 		// 전체 entry 탐색
+		
 		Map<String, String> map = new HashMap<String, String>();
 		map.put("korea", "seoul");
 		map.put("japan", "tokyo");
@@ -21,12 +22,18 @@ public class C02Map {
 			String val = map.get(key);
 			System.out.println(key + ":" + val);
 		}
+		System.out.println();
 		
-		// entrySet
+		// EntrySet 이용
 		System.out.println("entrySet 이용");
 		Set<Map.Entry<String, String>> entries = map.entrySet();
 		for(Map.Entry<String, String> entry : entries) {
 			System.out.println(entry.getKey() + ":" + entry.getValue());
 		}
+		System.out.println();
+		
+		// forEach 메소드 사용
+		System.out.println("forEach 메소드 사용");
+		map.forEach((k, v) -> System.out.println(k + ":" + v));
 	}
 }

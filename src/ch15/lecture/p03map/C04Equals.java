@@ -33,11 +33,23 @@ class Book {
 	}
 	@Override
 	public boolean equals(Object obj) {
-		
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Book other = (Book) obj;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		return true;
 	}
 	@Override
 	public String toString() {
-		
+		return title;
 	}
 	
 	
