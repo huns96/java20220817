@@ -24,7 +24,7 @@ public class C04IntermediateOperation {
 		System.out.println(r2);
 		
 		// filter : Predicate에서 true 나온 것만 추림
-		Integer r3 =  Stream.of(3,4,5,6,7)
+		Integer r3 =  Stream.of(3, 4, 5, 6, 7)
 				.filter((e) -> e % 2 == 0)
 				.reduce((x, y) -> x + y)
 				.get();
@@ -35,7 +35,63 @@ public class C04IntermediateOperation {
 		Integer r4 = Stream.of(3, 4, 5, 6, 7)
 				.filter((e) -> e % 2 != 0) //홀수만
 				.reduce((x, y) -> x + y)
-				
-				
+				.get();
+		
+		System.out.println(r4); // 15
+		
+		// distinct : 중복 제거
+		Integer r5 = Stream.of(3, 3, 4, 4, 5, 5, 5, 6, 7)
+				.distinct()
+				.reduce((x, y) -> x + y)
+				.get();
+		
+		System.out.println(r5);
+		
+		// sorted : 정렬한 스트림 리턴
+		Stream.of(5, 3, 0, 7, 9, 1)
+			.sorted()
+			.forEach(e -> System.out.println(e));
+		
+		// 중간연산 조합
+		Stream.of(5, 3, 0, 7, 9, 1)
+			.sorted()
+			.limit(3)
+			.forEach(e -> System.out.println(e));
+		
+		// 중간연산 조합
+		Stream.of(5, 3, 0, 7, 9, 1)
+			.limit(3)
+			.sorted()
+			.forEach(e -> System.out.println(e));
+		
+		
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
