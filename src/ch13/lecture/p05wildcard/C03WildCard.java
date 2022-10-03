@@ -8,19 +8,25 @@ public class C03WildCard {
 		list1.add("maverick");
 		list1.add("iceman");
 		
-		//unbounded wildcard
-		ArrayList<?> list2 = list1; // ok
-//		list2.add(""); // x
-//		list2.add(200); // x
+		// ? : unbouned wildcard
+		ArrayList<?> list2 = list1; //ok
+		list2.add(""); // x
+		list2.add(200); // x
 		
-		ArrayList<Integer> list3 = new ArrayList<Integer>();
+		ArrayList<Integer> list3 = new ArrayList<>();
 		list3.add(100);
 		list3.add(200);
 		
 		ArrayList<?> list4 = list3;
-//		list4.add(300);
-//		list4.add("");
-//		list4.add(new Object());
-		object o1 = list4.get(0);
+		list4.add(300); // x
+		list4.add(""); // x
+		list4.add(new Object()); // x
+		Object o1 = list4.get(0);
 	}
 }
+
+
+
+
+
+

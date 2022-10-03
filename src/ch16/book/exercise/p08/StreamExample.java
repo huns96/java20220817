@@ -11,12 +11,28 @@ public class StreamExample {
 		List<Member> list = Arrays.asList(
 				new Member ("홍길동", "개발자"),
 				new Member ("김나리", "디자이너"),
-				new Member ("신용권", "개발자")
-				);
+				new Member ("신용권", "개발자"));
+				
+		
+		Map<String, List<Member>> map = list.stream()
+				.collect(Collectors.groupingBy((m) -> m.getJob()));
+		
+		System.out.println("개발자");
+		System.out.println(map.get("개발자").get(0).getName());
+		System.out.println(map.get("개발자").get(1).getName());
+			
+		System.out.println("디자이너");
+		System.out.println(map.get("디자이너").get(0).getName());
 		
 		Map<String, List<String>> groupingMap = list.stream()
-				.collect(Collectors.groupingBy((m) -> m.getJob())));
-				
+				.collect(Collectors.groupingBy(Member::getJob,
+						Collectors.mapping(Member::getName, Collectors.toList())));
+		
+		Map<String, List<String>> groupingMap2 = list.stream()
+				.collect(Collectors.groupingBy(m -> m.getJob(),
+						Collectors.mapping(m -> m.getName(), Collectors.toList())));
+
+		System.out.println(groupingMap);
 				
 	}
 	
